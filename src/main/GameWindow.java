@@ -10,7 +10,7 @@ public class GameWindow {
 	public GameWindow(GamePanel gamePanel) {
 
 		jframe = new JFrame();
-                jframe.setTitle("Game_101");
+                jframe.setTitle("DOGE FIREBALL");
                 jframe.setSize(700,700);//position
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 jframe.setLocationRelativeTo(null);

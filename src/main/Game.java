@@ -14,8 +14,6 @@ public class Game {
         int count=0;
 	private GameWindow gameWindow;
 	private GamePanel gamePanel;
-	private final int FPS_SET = 120;
-        private final int UPS_SET = 200;
         private Player player;
         private Potion potion;
         private ArrayList<FireBall> fire = new ArrayList<FireBall>();
@@ -142,7 +140,7 @@ public class Game {
                 }
                 count=0;
             }
-            if(score>level*5)
+            if(score>level*25)
             {
               
                  fire.get(0).Speed_fire =  fire.get(0).Speed_fire +1;
@@ -156,6 +154,10 @@ public class Game {
             if(player.getPlayerArea().intersects(fire.get(0).getCoinArea()) && fire.get(0).isCanDmg() == true){
                 player.gotDMG(9);
                 fire.get(0).setCanDmg(false);
+            }
+              else if(player.getPlayerArea().intersects(fire1.get(0).getCoinArea()) && fire1.get(0).isCanDmg() == true){
+                player.gotDMG(9);
+                fire1.get(0).setCanDmg(false);
             }
         }
         public void checkPlayerGetpotion(){
